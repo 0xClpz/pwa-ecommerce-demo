@@ -39,7 +39,9 @@ import {hasPrerequisites} from 'features';
     );
 
   // TODO SW-2 - register the service worker
-
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('service-worker.js');
+    }
   // Your custom JavaScript goes here
   let app = new App();
   document.addEventListener('DOMContentLoaded', e => {
